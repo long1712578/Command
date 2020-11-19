@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Commander.Data;
+using AutoMapper;
 using Commander.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,7 +32,8 @@ namespace Commander
             services.AddDbContext<CommandDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("CommandDatabase")));
             services.AddControllers();
-            services.AddScoped<ICommanderRepo,CommanderRepo>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddScoped<ICommanderRepo, CommanderRepo>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Commander", Version = "v1" });
