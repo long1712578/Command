@@ -5701,27 +5701,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LongPham\\.nuget\\packages\\": {}
+    "C:\\Users\\TMT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "c:\\PDLong\\Commander\\Commander.csproj",
       "projectName": "Commander",
       "projectPath": "c:\\PDLong\\Commander\\Commander.csproj",
       "packagesPath": "C:\\Users\\TMT\\.nuget\\packages\\",
       "outputPath": "c:\\PDLong\\Commander\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\LongPham\\Desktop\\Command\\Commander.csproj",
-      "projectName": "Commander",
-      "projectPath": "C:\\Users\\LongPham\\Desktop\\Command\\Commander.csproj",
-      "packagesPath": "C:\\Users\\LongPham\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LongPham\\Desktop\\Command\\obj\\",
->>>>>>> b0f5d7ea92efb642a0fcdc49f1a55b816d47a78d
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LongPham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\TMT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5733,6 +5725,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -5744,6 +5737,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -5808,8 +5802,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file c:\\PDLong\\Commander\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

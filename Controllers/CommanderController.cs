@@ -13,6 +13,7 @@ namespace Commander.Controllers
     public class CommanderControllers : ControllerBase
     {
         private readonly ICommanderRepo repostory;
+<<<<<<< HEAD
         private readonly IMapper _map;
         public CommanderControllers(ICommanderRepo repo, IMapper map)
         {
@@ -67,6 +68,25 @@ namespace Commander.Controllers
             repostory.DeleteComamd(cmd);
             repostory.SaveChange();
             return NoContent();
+=======
+        private readonly IMapper _mapper;
+        public CommanderControllers(ICommanderRepo repo,IMapper mapper){
+            repostory=repo;
+            _mapper=mapper;
+        }
+        [HttpGet]
+        public  ActionResult <IEnumerable<CommandDto>> GetAllCommands(){
+            var commanders=repostory.GetAppCommands();
+            return Ok(_mapper.Map<IEnumerable<CommandDto>>(commanders));
+        }
+        [HttpGet("{id}")]
+        public ActionResult <CommandDto> GetCommandById(int id){
+            var commander=repostory.GetCommandById(id);
+            if(commander!=null){
+                return Ok(_mapper.Map<CommandDto>(commander));
+            }
+            return NotFound();
+>>>>>>> b0f5d7ea92efb642a0fcdc49f1a55b816d47a78d
         }
 
     }
